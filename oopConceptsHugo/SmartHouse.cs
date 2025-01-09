@@ -8,6 +8,7 @@ namespace oopConceptsHugo
 {
     public class SmartHouse : AHouse
     {
+        
         private double energyConsumption;
         public double EnergyConsumption
         {
@@ -39,6 +40,11 @@ namespace oopConceptsHugo
         public override void Clean()
         {
             Console.WriteLine("cleaning modern house at {0}", this.Direction);
+        }
+        public void LaundryTime()
+        {
+            AppliancesHelper.TurnOnAppliance("Washing-machine");
+            AppliancesHelper.TurnOffAppliance("Washing-machine");
         }
     }
 }
